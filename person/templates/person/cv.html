@@ -1,0 +1,80 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'person/style.css' %}">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<div class="wraper">
+		<div class="container">
+		<div class="left-content p-30">
+			<div class="logo">
+				<a href="index.html">
+					<span>My</span>
+					<span>Resume</span>
+				</a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="#Home">Home</a></li>
+					<li><a href="#About">About</a></li>
+					<li><a href="">Work Profile</a></li>
+					<li><a href="">Portfolio</a></li>
+					<li><a href="">Education</a></li>
+				</ul>
+			</div>
+			<div class="left-footer">
+				<div class="social-icons">
+					<ul>
+						<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="foot-contact">
+					<ul>
+						<li>{{ person.contact.email_address }}</li>
+						<li>{{ person.contact.phone_number }}</li>
+					</ul>
+				</div>
+				
+			</div>
+
+		</div>
+		<div class="main-content">
+			<div class="section1 p-30" id="Home">
+			<div class="sec-title">
+	<div class="pg-sub-title">Home</div>
+	<div class="pg-title">My Profile</div>
+			</div>
+				<div class="d-flex-align-center">
+				<div class="user-img flex-1"><img src="{{ person.profile_picture.url }}" alt="img"></div>
+				<div class="user-profile flex-1">
+					<div class="pro-details">
+						<div class="sm-text">Hallo, ich bin</div>
+						<div class="name">{{ person }}</div>
+						<div class="role">{{ person.role }}</div>
+
+					</div>
+					<div class="text">{{ person.profile }}</div>
+					<div class="pr-list">
+						<ul>
+							<li><i class="fa fa-calendar" aria-hidden="true"></i>{{ person.date_of_birth }}</li>
+							<li><i class="fa fa-phone" aria-hidden="true"></i>{{ person.contact.phone_number }}</li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i>{{ person.contact.email_address }}</li>
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ person.address.city }}, {{ person.address.country }}</li>
+						</ul>
+					</div>
+			<div class="social-icons-head">
+					<ul>
+						<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				</div>
+			</div>
+			</div>
+
+		</div>
+	</div>
+</div>
