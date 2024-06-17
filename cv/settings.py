@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'person.apps.PersonConfig',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
