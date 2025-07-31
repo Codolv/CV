@@ -45,7 +45,9 @@
 	<div class="pg-title">My Profile</div>
 			</div>
 				<div class="d-flex-align-center">
+					{%if person.profile_picture%}
 				<div class="user-img flex-1"><img src="{{ person.profile_picture.url }}" alt="img"></div>
+				{%endif%}
 				<div class="user-profile flex-1">
 					<div class="pro-details">
 						<div class="sm-text">Hallo, ich bin</div>

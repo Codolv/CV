@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
 
-    path('<int:pk>', views.CVView.as_view(), name = "cv"),
+    path('<int:pk>', views.CVView.as_view(), name="cv"),
 ]
